@@ -1,0 +1,6 @@
+C:\Users\zglicz\Documents\GitHub\CoViVo\CoViVoServer\CoViVoServer\bin\Debug\CoViVoServer.exe.config
+C:\Users\zglicz\Documents\GitHub\CoViVo\CoViVoServer\CoViVoServer\bin\Debug\CoViVoServer.exe
+C:\Users\zglicz\Documents\GitHub\CoViVo\CoViVoServer\CoViVoServer\bin\Debug\CoViVoServer.pdb
+C:\Users\zglicz\Documents\GitHub\CoViVo\CoViVoServer\CoViVoServer\obj\Debug\CoViVoServer.csprojResolveAssemblyReference.cache
+C:\Users\zglicz\Documents\GitHub\CoViVo\CoViVoServer\CoViVoServer\obj\Debug\CoViVoServer.exe
+C:\Users\zglicz\Documents\GitHub\CoViVo\CoViVoServer\CoViVoServer\obj\Debug\CoViVoServer.pdb
