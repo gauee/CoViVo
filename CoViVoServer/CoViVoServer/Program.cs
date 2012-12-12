@@ -11,6 +11,7 @@ namespace CoViVoServer
     class TestProgram {
         static void Main(string[] args)
         {
+            log4net.Config.XmlConfigurator.Configure();
             // mozna testowac. podstawowa obsluga klienta. patrze basicServer.handleConnection
             /*AbstractServer basicServer = new BasicServer();
             basicServer.runServer();*/
