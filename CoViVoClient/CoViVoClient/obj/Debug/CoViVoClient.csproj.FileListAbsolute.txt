@@ -4,3 +4,6 @@ C:\Users\zglicz\Documents\GitHub\CoViVo\CoViVoClient\CoViVoClient\bin\Debug\CoVi
 C:\Users\zglicz\Documents\GitHub\CoViVo\CoViVoClient\CoViVoClient\obj\Debug\CoViVoClient.exe
 C:\Users\zglicz\Documents\GitHub\CoViVo\CoViVoClient\CoViVoClient\obj\Debug\CoViVoClient.pdb
 C:\Users\zglicz\Documents\GitHub\CoViVo\CoViVoClient\CoViVoClient\obj\Debug\CoViVoClient.csprojResolveAssemblyReference.cache
+C:\Users\nicole\Downloads\CoViVo-master\CoViVo-master\CoViVoClient\CoViVoClient\bin\Debug\CoViVoClient.exe.config
+C:\Users\nicole\Downloads\CoViVo-master\CoViVo-master\CoViVoClient\CoViVoClient\obj\Debug\CoViVoClient.exe
+C:\Users\nicole\Downloads\CoViVo-master\CoViVo-master\CoViVoClient\CoViVoClient\obj\Debug\CoViVoClient.pdb
