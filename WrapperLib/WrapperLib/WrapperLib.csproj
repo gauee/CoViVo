@@ -40,7 +40,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AudioVideoText.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="ServerMsg.cs" />
     <Compile Include="Error.cs" />
     <Compile Include="Message.cs" />
