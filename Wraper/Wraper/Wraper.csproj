@@ -39,14 +39,11 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="WrapperLib">
+      <HintPath>..\..\WrapperLib\WrapperLib\bin\Debug\WrapperLib.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="WrapperEngine.cs" />
-    <Compile Include="CommunicationWrapper.cs" />
-    <Compile Include="Constants.cs" />
-    <Compile Include="ErrorWrapper.cs" />
-    <Compile Include="MessageWrapper.cs" />
-    <Compile Include="Util.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
