@@ -10,7 +10,7 @@ namespace WrapperLib
 {
     class Util
     {
-        public virtual byte[] Wrap(Message kom)
+        public static byte[] Wrap(Message kom)
         {
             XmlSerializer serializer = new XmlSerializer(typeof(Message));
             StringBuilder sb = new StringBuilder();
