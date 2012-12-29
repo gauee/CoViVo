@@ -9,7 +9,7 @@ using System.Xml.Serialization;
 namespace WrapperLib
 {
     [Serializable]
-    class AudioVideoText : Message
+    public class AudioVideoText : Message
     {
         public byte[] audio
         { get; set; }
@@ -20,9 +20,9 @@ namespace WrapperLib
         public byte[] text
         { get; set; }
 
-        AudioVideoText() : base()
+        public AudioVideoText() : base()
         {
-            
+           
         }
 
     }

@@ -8,7 +8,7 @@ using System.Xml.Serialization;
 
 namespace WrapperLib
 {
-    class Util
+    public class Util
     {
         public static byte[] Wrap(Message kom)
         {

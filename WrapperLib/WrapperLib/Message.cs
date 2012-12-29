@@ -12,7 +12,7 @@ namespace WrapperLib
     [XmlInclude(typeof(AudioVideoText))]
     [XmlInclude(typeof(ServerMsg))]
     [XmlInclude(typeof(Error))]
-    abstract class Message
+    public abstract class Message
     {
         public int messageCode
         { get; set; }

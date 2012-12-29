@@ -7,12 +7,17 @@ using System.Threading.Tasks;
 namespace WrapperLib
 {
     [Serializable]
-    class ServerMsg :Message
+    public class ServerMsg :Message
     {
         int command
         { get; set; }
 
         string parameters
         { get; set; }
+
+        public ServerMsg() : base(){
+            command = 0;
+            parameters = "";
+        }
     }
 }

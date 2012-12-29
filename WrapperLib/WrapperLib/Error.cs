@@ -9,12 +9,12 @@ using System.Xml.Serialization;
 namespace WrapperLib
 {
     [Serializable]
-    class Error : Message
+    public class Error : Message
     {
         public string errorMsg
         { get; set; }
 
-        Error() : base() 
+        public Error() : base() 
         {
             errorMsg = "";
         }
