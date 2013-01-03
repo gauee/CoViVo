@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace WrapperLib
 {
+
     [Serializable]
-    public class ServerMsg : Message
+    public class Audio : Message
     {
-        public int command
+        public byte[] audio
         { get; set; }
 
-        public string parameters
-        { get; set; }
+        public Audio()
+            : base()
+        {
 
-        public ServerMsg() : base(){
-            command = 0;
-            parameters = "";
         }
+
     }
 }

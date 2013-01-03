@@ -9,9 +9,13 @@ using System.Xml.Serialization;
 namespace WrapperLib
 {   
     [Serializable]
-    [XmlInclude(typeof(AudioVideoText))]
+    [XmlInclude(typeof(Audio))]
+    [XmlInclude(typeof(Video))]
+    [XmlInclude(typeof(Text))]
     [XmlInclude(typeof(ServerMsg))]
     [XmlInclude(typeof(Error))]
+    [XmlInclude(typeof(JoinChannel))]
+    [XmlInclude(typeof(ChannelList))]
     public abstract class Message
     {
         public int messageCode

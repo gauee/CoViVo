@@ -7,17 +7,15 @@ using System.Threading.Tasks;
 namespace WrapperLib
 {
     [Serializable]
-    public class ServerMsg : Message
+    public class ChannelList : ServerMsg
     {
-        public int command
+        public string[] channelList
         { get; set; }
 
-        public string parameters
-        { get; set; }
+        public ChannelList()
+            : base()
+        {
 
-        public ServerMsg() : base(){
-            command = 0;
-            parameters = "";
         }
     }
 }
