@@ -39,13 +39,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alive.cs" />
     <Compile Include="Audio.cs" />
+    <Compile Include="Autenticate.cs" />
     <Compile Include="ChannelList.cs" />
     <Compile Include="JoinChannel.cs" />
+    <Compile Include="LeaveChannel.cs" />
+    <Compile Include="RequestAlive.cs" />
+    <Compile Include="RequestChannelList.cs" />
     <Compile Include="ServerMsg.cs" />
     <Compile Include="Error.cs" />
     <Compile Include="Message.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StartChannel.cs" />
     <Compile Include="Text.cs" />
     <Compile Include="Util.cs" />
     <Compile Include="Video.cs" />

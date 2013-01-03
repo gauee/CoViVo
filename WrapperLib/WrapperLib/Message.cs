@@ -16,6 +16,13 @@ namespace WrapperLib
     [XmlInclude(typeof(Error))]
     [XmlInclude(typeof(JoinChannel))]
     [XmlInclude(typeof(ChannelList))]
+    [XmlInclude(typeof(RequestChannelList))]
+    [XmlInclude(typeof(Autenticate))]
+    [XmlInclude(typeof(LeaveChannel))]
+    [XmlInclude(typeof(StartChannel))]
+    [XmlInclude(typeof(RequestAlive))]
+    [XmlInclude(typeof(Alive))]
+
     public abstract class Message
     {
         public int messageCode
