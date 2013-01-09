@@ -4,3 +4,6 @@ C:\Users\Nir3us\CoViVo\CoViVo\Wraper\Wraper\bin\Debug\Wraper.exe
 C:\Users\Nir3us\CoViVo\CoViVo\Wraper\Wraper\bin\Debug\Wraper.pdb
 C:\Users\Nir3us\CoViVo\CoViVo\Wraper\Wraper\obj\Debug\Wraper.exe
 C:\Users\Nir3us\CoViVo\CoViVo\Wraper\Wraper\obj\Debug\Wraper.pdb
+C:\Users\Nir3us\CoViVo\CoViVo\Wraper\Wraper\bin\Debug\WrapperLib.dll
+C:\Users\Nir3us\CoViVo\CoViVo\Wraper\Wraper\bin\Debug\WrapperLib.pdb
+C:\Users\Nir3us\CoViVo\CoViVo\Wraper\Wraper\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll

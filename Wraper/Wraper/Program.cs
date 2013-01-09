@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WrapperLib;
 
 namespace Wraper
 {
@@ -10,49 +11,21 @@ namespace Wraper
     {
         static void Main(string[] args)
         {
-            Util a= new Util();
-            Console.WriteLine("Siema");
-            Console.WriteLine(a.UnwrapTags(a.WrapWithTag("masdasd","asdasdasdas<asd>","</asd>adasdasdas"),"<asd>","</asd>"));
+            Text avt;
+            avt = new Text();
+            avt.messageCode = 5;
+            avt.messageNumber = 1000;
+            System.Text.ASCIIEncoding encoding = new System.Text.ASCIIEncoding();
 
-            ErrorWrapper err = new ErrorWrapper();
-            ErrorWrapper err2 = new ErrorWrapper();
-            
-            err.SetError("asdasdas");
-            Console.WriteLine(err.Wrap());
+            avt.text = "kuba";
 
-            err2.Unwrap(err.Wrap());
-            Console.WriteLine(err2.Wrap());
+            byte[] b = Util.Wrap(avt);
+            Console.WriteLine(encoding.GetString(b));
+            Text at = (Text)Util.Unwrap(b);
+            Console.WriteLine(at.messageCode);
+            Console.WriteLine(at.messageNumber);
+            Console.WriteLine(at.text);
             Console.WriteLine();
-
-            MessageWrapper msg = new MessageWrapper();
-            MessageWrapper msg2 = new MessageWrapper();
-
-            msg.SetAudioMsg("asdasdas");
-            msg.SetVideoMsg("adsadasaaa");
-
-            Console.WriteLine(msg.Wrap());
-            msg2.Unwrap(msg.Wrap());
-            Console.WriteLine(msg2.Wrap());
-            Console.WriteLine();
-            CommunicationWrapper com = new CommunicationWrapper();
-            CommunicationWrapper com2 = new CommunicationWrapper();
-
-            com.SetAddChannel("asdasdas");
-            com.SetChannelList("adsadasaaa");
-
-            Console.WriteLine(com.Wrap());
-            com2.Unwrap(com.Wrap());
-            Console.WriteLine(com2.Wrap());
-            Console.WriteLine();
-            WrapperEngine eng = new WrapperEngine();
-            WrapperEngine eng2 = new WrapperEngine();
-            eng.errWrap = err;
-            eng.msgWrap = msg;
-            eng.comWrap = com;
-
-            Console.WriteLine(eng.Wrap());
-            eng2.Unwrap(eng.Wrap());
-            Console.WriteLine(eng2.Wrap());
             Console.ReadKey();
         }
     }

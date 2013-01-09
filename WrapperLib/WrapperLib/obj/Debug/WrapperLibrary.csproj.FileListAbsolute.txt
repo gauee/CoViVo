@@ -1,0 +1,5 @@
+C:\Users\Nir3us\CoViVo\CoViVo\WrapperLib\WrapperLib\bin\Debug\ClassLibrary.dll
+C:\Users\Nir3us\CoViVo\CoViVo\WrapperLib\WrapperLib\bin\Debug\ClassLibrary.pdb
+C:\Users\Nir3us\CoViVo\CoViVo\WrapperLib\WrapperLib\obj\Debug\WrapperLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Nir3us\CoViVo\CoViVo\WrapperLib\WrapperLib\obj\Debug\ClassLibrary.dll
+C:\Users\Nir3us\CoViVo\CoViVo\WrapperLib\WrapperLib\obj\Debug\ClassLibrary.pdb
