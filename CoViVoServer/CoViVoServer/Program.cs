@@ -13,10 +13,10 @@ namespace CoViVoServer
         {
             log4net.Config.XmlConfigurator.Configure();
             // mozna testowac. podstawowa obsluga klienta. patrze basicServer.handleConnection
-            /*AbstractServer basicServer = new BasicServer();
-            basicServer.runServer();*/
-            AbstractServer appServer = new AppServer();
-            appServer.runServer();
+            AbstractServer basicServer = new BasicServer();
+            basicServer.runServer();
+            /*AbstractServer appServer = new AppServer();
+            appServer.runServer();*/
         }
     }
 }

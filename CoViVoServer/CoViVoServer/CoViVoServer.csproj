@@ -42,6 +42,9 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="WrapperLib">
+      <HintPath>..\..\WrapperLib\WrapperLib\bin\Debug\WrapperLib.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BasicServer.cs" />

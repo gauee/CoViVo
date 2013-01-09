@@ -15,7 +15,7 @@ namespace CoViVoServer
         private static readonly ILog log = LogManager.GetLogger(typeof(AppServer));
         Queue<int> emptyPorts;
 
-        AppServer() : base() {
+        public AppServer() : base() {
             emptyPorts = new Queue<int>();
             for (int i = 1; i <= 100; ++i) {
                 emptyPorts.Enqueue(i);
@@ -58,7 +58,7 @@ namespace CoViVoServer
 
         public void runChannel(Object data) {
             sourceIpAddress = (String)data;
-            while () {
+            while (true) {
                 // odczytanie komunikatu
             }
         }
