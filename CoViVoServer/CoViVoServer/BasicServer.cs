@@ -11,32 +11,18 @@ namespace CoViVoServer
     public class BasicServer : AbstractServer
     {
 
-        public override void runServer()
+        public override void handleClient(IAsyncResult result)
         {
+            TcpClient tcpClient = this.tcpListener.EndAcceptTcpClient(result);
             int recv;
             byte[] data = new byte[1024];
-
-            Console.WriteLine("Waiting for a client...");
-
-            IPEndPoint sender = new IPEndPoint(IPAddress.Any, 0);
-            EndPoint tmpRemote = (EndPoint)(sender);
-
-            recv = receive(data, ref tmpRemote);
-
-            Console.WriteLine("Message received from {0}:", tmpRemote.ToString());
-            Console.WriteLine(Encoding.ASCII.GetString(data, 0, recv));
-
-            string welcome = "Welcome to my test server";
-            data = Encoding.ASCII.GetBytes(welcome);
-            sendTo(data, tmpRemote);
-
-            for (int i = 0; i < 5; i++)
-            {
-                data = new byte[1024];
-                recv = receive(data, ref tmpRemote);
-                Console.WriteLine(Encoding.ASCII.GetString(data, 0, recv));
-            }
-            close();
+            NetworkStream networkStream = tcpClient.GetStream();
+            recv = networkStream.Read(data, 0, 1024);
+            Console.WriteLine(" read : " + data);
+            String message = "Hello to server";
+            data = ASCIIEncoding.UTF8.GetBytes(message);
+            networkStream.Write(data, 0, data.Length);
+            tcpListener.BeginAcceptTcpClient(handleClient, null);
         }
     }
 }

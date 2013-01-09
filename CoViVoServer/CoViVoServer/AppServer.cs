@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using log4net;
@@ -11,63 +12,51 @@ namespace CoViVoServer
     public class AppServer : AbstractServer {
 
         private static readonly ILog log = LogManager.GetLogger(typeof(AppServer));
-        Dictionary<EndPoint, ChannelHandler> channels;
-        int counter;
+        Queue<int> emptyPorts;
 
-        public AppServer() {
-            counter = 0;
-            channels = new Dictionary<EndPoint, ChannelHandler>();
-        }
-
-        void handleClient() {
-            int recv;
-            byte[] data = new byte[1024];
-            IPEndPoint sender = new IPEndPoint(IPAddress.Any, 0);
-            EndPoint tmpRemote = (EndPoint)(sender);
-            try{
-                log.Info("Waiting for message");
-                recv = receive(data, ref tmpRemote);
-                log.Info("Received data from: " + tmpRemote.ToString() + " , message : " + data.ToString());
-                ChannelHandler channel;
-                if (channels.ContainsKey(tmpRemote))
-                {
-                    channel = channels[tmpRemote];
-                }
-                else
-                {
-                    channel = new ChannelHandler(this, tmpRemote);
-                    channels.Add(tmpRemote, channel);
-                    ThreadPool.QueueUserWorkItem(channel.runChannel, counter++);
-                }
-            } catch (SystemException se) {
-                Console.WriteLine("Exception while communicating with client.");
+        AppServer() : base() {
+            emptyPorts = new Queue<int>();
+            for (int i = 1; i <= 100; ++i) {
+                emptyPorts.Enqueue(i);
             }
         }
 
-        public override void runServer() {
-            log.Info("Starting server");
-            while (true) {
-                handleClient();
-            }
-            log.Info("Stoping server");
-        }
-
-        class ChannelHandler
+        public override void handleClient(IAsyncResult result)
         {
-            AbstractServer abstractServer;
-            EndPoint endPoint;
-
-            public ChannelHandler(AbstractServer abstractServer, EndPoint endPoint)
+            TcpClient tcpClient = this.tcpListener.EndAcceptTcpClient(result);
+            // wczytaj obiekt informacji
+            // jezeli jest to nowy kanal
             {
-                this.abstractServer = abstractServer;
-                this.endPoint = endPoint;
+                int newPortNumber = emptyPorts.Dequeue();
+                // send to the client information about the newPortNumber
+                ChannelHandler channel = new ChannelHandler(newPortNumber);
+                ThreadPool.QueueUserWorkItem(channel.runChannel, ((IPEndPoint)tcpClient.Client.RemoteEndPoint).Address.ToString());
             }
+            { 
 
-            public void runChannel(Object threadNumber)
-            {
-                while (true)
-                {
-                }
+            }
+        }
+
+    }
+    public class ChannelHandler {
+        private int port;
+        private String sourceIpAddress;
+        private IPEndPoint ipEndPoint;
+        private Socket socket;
+
+        List<EndPoint> clients;
+
+        public ChannelHandler(int portNumber) {
+            this.port = portNumber;
+            ipEndPoint = new IPEndPoint(IPAddress.Any, this.port);
+            socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
+            socket.Bind(ipEndPoint);
+        }
+
+        public void runChannel(Object data) {
+            sourceIpAddress = (String)data;
+            while () {
+                // odczytanie komunikatu
             }
         }
     }

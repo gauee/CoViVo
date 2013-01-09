@@ -11,32 +11,23 @@ namespace CoViVoServer
     public abstract class AbstractServer
     {
         private const int STANDARD_PORT = 9050;
-
-        private IPEndPoint ipEndPoint;
-        private Socket socket;
+        private IPAddress addr = IPAddress.Any;
+        private int port;
+        protected TcpListener tcpListener;
 
         protected AbstractServer() : this(STANDARD_PORT){
         }
 
         protected AbstractServer(int port) {
-            ipEndPoint = new IPEndPoint(IPAddress.Any, 9050);
-            socket = new Socket(AddressFamily.InterNetwork,
-                            SocketType.Dgram, ProtocolType.Udp);
-            socket.Bind(ipEndPoint);
+            this.port = port;
+            this.tcpListener = new TcpListener(addr, port);
         }
 
-        public int receive(byte[] data, ref EndPoint endPoint) {
-            return socket.ReceiveFrom(data, ref endPoint);
+        public void runServer() {
+            this.tcpListener.Start();
+            this.tcpListener.BeginAcceptTcpClient(handleClient, null);
         }
 
-        public void sendTo(byte[] array, EndPoint endPoint) {
-            socket.SendTo(array, endPoint);
-        }
-
-        public void close() {
-            socket.Close();
-        }
-
-        public abstract void runServer();
+        public abstract void handleClient(IAsyncResult result);
     }
 }
