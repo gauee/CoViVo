@@ -6,6 +6,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using log4net;
+using WrapperLib;
 
 namespace CoViVoServer
 {
@@ -24,6 +25,8 @@ namespace CoViVoServer
         public override void handleClient(IAsyncResult result)
         {
             TcpClient tcpClient = this.tcpListener.EndAcceptTcpClient(result);
+            byte[] array = new byte[1024];
+            Message msg = Util.Unwrap(array);
             // wczytaj obiekt informacji
             // jezeli jest to nowy kanal
             {
