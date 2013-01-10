@@ -11,9 +11,8 @@ namespace CoViVoServer
     public class BasicServer : AbstractServer
     {
 
-        public override void handleClient(IAsyncResult result)
+        public override void handleClient(TcpClient tcpClient)
         {
-            TcpClient tcpClient = this.tcpListener.EndAcceptTcpClient(result);
             int recv;
             byte[] data = new byte[1024];
             NetworkStream networkStream = tcpClient.GetStream();
@@ -22,7 +21,7 @@ namespace CoViVoServer
             String message = "Hello to server";
             data = ASCIIEncoding.UTF8.GetBytes(message);
             networkStream.Write(data, 0, data.Length);
-            tcpListener.BeginAcceptTcpClient(handleClient, null);
+            tcpClient.Close();
         }
     }
 }

@@ -27,10 +27,11 @@ namespace CoViVoServer
             this.tcpListener.Start();
             while (true)
             {
-                this.tcpListener.BeginAcceptTcpClient(handleClient, null);
+                TcpClient client = tcpListener.AcceptTcpClient();
+                handleClient(client);
             }
         }
 
-        public abstract void handleClient(IAsyncResult result);
+        public abstract void handleClient(TcpClient client);
     }
 }
