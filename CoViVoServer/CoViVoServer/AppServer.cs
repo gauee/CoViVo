@@ -22,9 +22,8 @@ namespace CoViVoServer
             }
         }
 
-        public override void handleClient(IAsyncResult result)
+        public override void handleClient(TcpClient tcpClient)
         {
-            TcpClient tcpClient = this.tcpListener.EndAcceptTcpClient(result);
             byte[] array = new byte[1024];
             Message msg = Util.Unwrap(array);
             // wczytaj obiekt informacji
