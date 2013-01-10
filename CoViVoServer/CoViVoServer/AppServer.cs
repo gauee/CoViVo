@@ -13,12 +13,16 @@ namespace CoViVoServer
     public class AppServer : AbstractServer {
 
         private static readonly ILog log = LogManager.GetLogger(typeof(AppServer));
-        Queue<int> emptyPorts;
+        List<String> users;
 
         public AppServer() : base() {
-            emptyPorts = new Queue<int>();
-            for (int i = 1; i <= 100; ++i) {
-                emptyPorts.Enqueue(i);
+            users = new List<string>();
+        }
+
+        public void currentUserList() {
+            log.Info("User list:");
+            foreach (String user in users) {
+                log.Info("-- " + user);
             }
         }
 
@@ -26,11 +30,16 @@ namespace CoViVoServer
         {
             byte[] array = new byte[1024];
             Message msg = Util.Unwrap(array);
-            if (msg is JoinServer) { 
+            if (msg is JoinServer) {
+                JoinServer joinServerMsg = (JoinServer)msg;
+                String userName = joinServerMsg.user;
+                users.Add(userName);
+                log.Info(userName + " has joined the server");
+                currentUserList();
             }
         }
-
     }
+
     public class ChannelHandler {
         private int port;
         private String sourceIpAddress;
