@@ -16,3 +16,5 @@ C:\Users\Tomek\Documents\GitHub\CoViVo\CoViVoClient\CoViVoClient\obj\Debug\CoViV
 C:\Users\Tomek\Documents\GitHub\CoViVo\CoViVoClient\CoViVoClient\bin\Debug\CoViVoClient.exe.config
 C:\Users\Tomek\Documents\GitHub\CoViVo\CoViVoClient\CoViVoClient\bin\Debug\CoViVoClient.exe
 C:\Users\Tomek\Documents\GitHub\CoViVo\CoViVoClient\CoViVoClient\bin\Debug\CoViVoClient.pdb
+C:\Users\Tomek\Documents\GitHub\CoViVo\CoViVoClient\CoViVoClient\bin\Debug\WrapperLib.dll
+C:\Users\Tomek\Documents\GitHub\CoViVo\CoViVoClient\CoViVoClient\bin\Debug\WrapperLib.pdb

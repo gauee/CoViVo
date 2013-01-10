@@ -34,6 +34,9 @@ namespace CoViVoClient
             JoinServer js = new JoinServer();
             js.user = "deva";
             byte[] to_send = Util.Wrap(js);
+            System.Text.ASCIIEncoding encoding = new System.Text.ASCIIEncoding();
+            Console.WriteLine(encoding.GetString(to_send));
+
             sendMessage(to_send);
         }
 
