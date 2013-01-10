@@ -27,14 +27,14 @@ namespace CoViVoClient
                 else {
                     Console.WriteLine("Blad przy polaczeniu");
                 }
-                if (client.send_message(msg1)) {
+                if (client.sendMessage(msg1)) {
                     Console.WriteLine("Wyslano pierwsza wiadomosc");
                     while (true) { }
                 }
                 else {
                     Console.WriteLine("Nie udalo sie wyslac wiadomosci");
                 }
-                return;
+                client.joinServer();
                 //Application.EnableVisualStyles();
                 //Application.SetCompatibleTextRenderingDefault(false);
                 //Application.Run(new CoViVo());
