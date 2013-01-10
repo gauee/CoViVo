@@ -43,6 +43,7 @@
     <Compile Include="Audio.cs" />
     <Compile Include="Autenticate.cs" />
     <Compile Include="ChannelList.cs" />
+    <Compile Include="JoinServer.cs" />
     <Compile Include="JoinChannel.cs" />
     <Compile Include="LeaveChannel.cs" />
     <Compile Include="RequestAlive.cs" />
