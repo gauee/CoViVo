@@ -5,6 +5,5 @@ C:\Users\Nir3us\CoViVo\CoViVo\WrapperLib\WrapperLib\obj\Debug\WrapperLib.dll
 C:\Users\Nir3us\CoViVo\CoViVo\WrapperLib\WrapperLib\obj\Debug\WrapperLib.pdb
 C:\Users\zglicz\Documents\GitHub\CoViVo\WrapperLib\WrapperLib\bin\Debug\WrapperLib.dll
 C:\Users\zglicz\Documents\GitHub\CoViVo\WrapperLib\WrapperLib\bin\Debug\WrapperLib.pdb
-C:\Users\zglicz\Documents\GitHub\CoViVo\WrapperLib\WrapperLib\obj\Debug\WrapperLib.csprojResolveAssemblyReference.cache
 C:\Users\zglicz\Documents\GitHub\CoViVo\WrapperLib\WrapperLib\obj\Debug\WrapperLib.dll
 C:\Users\zglicz\Documents\GitHub\CoViVo\WrapperLib\WrapperLib\obj\Debug\WrapperLib.pdb
