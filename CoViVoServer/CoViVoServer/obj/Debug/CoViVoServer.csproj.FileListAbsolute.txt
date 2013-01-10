@@ -8,3 +8,13 @@ C:\Users\zglicz\Documents\GitHub\CoViVo\CoViVoServer\CoViVoServer\bin\Debug\log4
 C:\Users\zglicz\Documents\GitHub\CoViVo\CoViVoServer\CoViVoServer\bin\Debug\log4net.xml
 C:\Users\zglicz\Documents\GitHub\CoViVo\CoViVoServer\CoViVoServer\bin\Debug\WrapperLib.dll
 C:\Users\zglicz\Documents\GitHub\CoViVo\CoViVoServer\CoViVoServer\bin\Debug\WrapperLib.pdb
+C:\Users\Tomek\Documents\GitHub\CoViVo\CoViVoServer\CoViVoServer\bin\Debug\CoViVoServer.exe.config
+C:\Users\Tomek\Documents\GitHub\CoViVo\CoViVoServer\CoViVoServer\obj\Debug\CoViVoServer.exe
+C:\Users\Tomek\Documents\GitHub\CoViVo\CoViVoServer\CoViVoServer\obj\Debug\CoViVoServer.pdb
+C:\Users\Tomek\Documents\GitHub\CoViVo\CoViVoServer\CoViVoServer\bin\Debug\CoViVoServer.exe
+C:\Users\Tomek\Documents\GitHub\CoViVo\CoViVoServer\CoViVoServer\bin\Debug\CoViVoServer.pdb
+C:\Users\Tomek\Documents\GitHub\CoViVo\CoViVoServer\CoViVoServer\bin\Debug\log4net.dll
+C:\Users\Tomek\Documents\GitHub\CoViVo\CoViVoServer\CoViVoServer\bin\Debug\WrapperLib.dll
+C:\Users\Tomek\Documents\GitHub\CoViVo\CoViVoServer\CoViVoServer\bin\Debug\log4net.xml
+C:\Users\Tomek\Documents\GitHub\CoViVo\CoViVoServer\CoViVoServer\bin\Debug\WrapperLib.pdb
+C:\Users\Tomek\Documents\GitHub\CoViVo\CoViVoServer\CoViVoServer\obj\Debug\CoViVoServer.csprojResolveAssemblyReference.cache
