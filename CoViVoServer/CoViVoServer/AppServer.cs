@@ -26,16 +26,7 @@ namespace CoViVoServer
         {
             byte[] array = new byte[1024];
             Message msg = Util.Unwrap(array);
-            // wczytaj obiekt informacji
-            // jezeli jest to nowy kanal
-            {
-                int newPortNumber = emptyPorts.Dequeue();
-                // send to the client information about the newPortNumber
-                ChannelHandler channel = new ChannelHandler(newPortNumber);
-                ThreadPool.QueueUserWorkItem(channel.runChannel, ((IPEndPoint)tcpClient.Client.RemoteEndPoint).Address.ToString());
-            }
-            { 
-
+            if (msg is JoinServer) { 
             }
         }
 

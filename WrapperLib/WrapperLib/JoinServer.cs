@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace WrapperLib
 {
     [ Serializable ]
-    class JoinServer : ServerMsg
+    public class JoinServer : ServerMsg
     {
 
     }

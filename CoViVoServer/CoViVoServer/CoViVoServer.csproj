@@ -42,7 +42,8 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="WrapperLib">
+    <Reference Include="WrapperLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\WrapperLib\WrapperLib\bin\Debug\WrapperLib.dll</HintPath>
     </Reference>
   </ItemGroup>
